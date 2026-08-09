@@ -162,15 +162,8 @@ def _transform_sources(raw_sources: list[dict]) -> list[AnswerSource]:
     """Convert pipeline source dicts to frontend-compatible AnswerSource objects."""
     transformed = []
     for src in raw_sources:
-        osd_id = src.get("osd_id", "unknown")
-        snippet = src.get("snippet", "")
-
-        # Extract a title from the snippet (first meaningful line)
-        title_lines = [
-            line.strip() for line in snippet.split("\n")
-            if line.strip() and not line.strip().startswith("OSD-ID:")
-        ]
-        title = title_lines[0] if title_lines else f"NASA OSDR Dataset {osd_id}"
+        osd_id = src.get("datasetId", src.get("osd_id", "unknown"))
+        title = src.get("title", f"NASA OSDR Dataset {osd_id}")
 
         # Clean up title — remove field prefixes like "title: " or "description: "
         for prefix in ["title: ", "description: ", "organism: "]:
@@ -185,7 +178,7 @@ def _transform_sources(raw_sources: list[dict]) -> list[AnswerSource]:
         transformed.append(AnswerSource(
             datasetId=osd_id,
             title=title,
-            url=src.get("url"),
+            url=src.get("url") or f"https://genelab.nasa.gov/data/search?q={osd_id}",
             organism=src.get("organism"),
             sampleCount=None,
         ))

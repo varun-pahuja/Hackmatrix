@@ -43,7 +43,7 @@ export async function askResearchQuestion(
       };
     }
   } catch (err) {
-    console.warn('[SpaceBio] Backend unreachable, using fallback:', err);
+    console.warn('[Biospace] Backend unreachable, using fallback:', err);
   }
 
   // Fallback only on real network errors

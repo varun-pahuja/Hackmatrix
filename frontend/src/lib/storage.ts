@@ -1,7 +1,7 @@
 import type { ChatSession } from '../types/research';
 
-const SESSIONS_KEY = 'spacebio_sessions';
-const CURRENT_SESSION_KEY = 'spacebio_current_session_id';
+const SESSIONS_KEY = 'Biospace_sessions';
+const CURRENT_SESSION_KEY = 'Biospace_current_session_id';
 const MAX_SESSIONS = 50;
 
 export function loadSessions(): ChatSession[] {

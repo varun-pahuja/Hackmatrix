@@ -47,7 +47,7 @@ export default function LandingPage({ onStartResearch }: LandingPageProps) {
           </div>
           <div>
             <h1 className="text-white font-semibold tracking-wide text-sm">
-              SPACEBIO
+              BIOSPACE
             </h1>
             <p className="text-white/50 text-[10px] uppercase tracking-[0.2em]">
               Intelligence

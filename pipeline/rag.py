@@ -157,9 +157,9 @@ def ask(qa_chain, question: str, history: list[dict] = None) -> dict:
             seen.add(osd_id)
             org = detect_organism(d.page_content) or "unknown"
             sources.append({
-                "osd_id": osd_id,
-                "url": d.metadata.get("url"),
-                "snippet": d.page_content[:200],
+                "datasetId": osd_id,
+                "title": d.metadata.get("title", ""),
+                "url": f"https://genelab.nasa.gov/data/search?q={osd_id}",
                 "organism": org
             })
 

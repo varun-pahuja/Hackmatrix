@@ -82,7 +82,7 @@ def fetch_all(save_dir: str = "data", limit: int = 100) -> list[dict]:
                     "metadata": {
                         "source": "OSDR",
                         "osd_id": osd_id,
-                        "url": f"https://osdr.nasa.gov/osdr/datasets/{osd_id}"
+                        "url": f"https://genelab.nasa.gov/data/search?q={osd_id}"
                     }
                 })
                 print(f"OK - {len(text)} chars")

@@ -64,7 +64,7 @@ export default function Preloader({ onComplete }: { onComplete: () => void }) {
                 transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.2 }}
               >
                 <h1 className="text-3xl font-bold tracking-[0.2em] text-white">
-                  SPACEBIO
+                  BIOSPACE
                 </h1>
               </motion.div>
               <motion.div

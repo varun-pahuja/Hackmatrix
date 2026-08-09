@@ -17,7 +17,7 @@ interface AnswerDisplayProps {
 }
 
 const LOADING_MESSAGES = [
-  'Initializing SpaceBio Intelligence Agent...',
+  'Initializing Biospace Intelligence Agent...',
   'Querying NASA OSDR & GeneLab Repository...',
   'Executing differential gene expression pipeline...',
   'Cross-referencing microgravity tissue transcriptomics...',

@@ -63,7 +63,7 @@ export default function DashboardLayout({
              <button onClick={() => setMobileMenuOpen(true)} className="p-2 rounded-md hover:bg-white/10 text-[#a1a1aa]">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
              </button>
-             <span className="font-semibold text-sm tracking-wider">SPACEBIO</span>
+             <span className="font-semibold text-sm tracking-wider">BIOSPACE</span>
              <div className="w-8" />
            </div>
           {children}
